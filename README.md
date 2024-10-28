@@ -1,18 +1,18 @@
 # Project Euler 031 - Coin Sums
 
-In the United Kingdom the currency is made up of pound (£) and pence (p).  There are eight coins in general circulation:
+Birleşik Krallık'ta para, pound (£) ve pence (p) olarak ikiye ayrılır. Sekiz madeni para bulunmaktadır:
 
-    1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), and £2 (200p).
+    1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), ve £2 (200p).
 
-It is possible to make £2 in the following way:
+Örnek olarak aşağıdaki gibi £2 yapabiliriz:
 
-    1x£1 + 1x50p + 2x20p + 1x5p + 1x2p + 3x1p
+    1 adet £1 + 1 adet 50p + 2 adet 20p + 1 adet 5p + 1 adet 2p + 3 adet 1p
 
-The aim is to find the number of different ways that `n` pence can be made using any number of coins.
+Bu problemde bizden istenen kaç adet kombinasyonla £2'a ulaşabiliriz.
 
-Information at [Project Euler 031](https://projecteuler.net/problem=31)
+Projenin detayı sağdaki linkte mevcuttur. [Project Euler 031](https://projecteuler.net/problem=31)
 
-**Hint**
+**İpucu**
 
 - There are 100 pence in a pound (£1 = 100p)
 - There are coins (in pence) that are available: 1, 2, 5, 10, 20, 50, 100, 200
