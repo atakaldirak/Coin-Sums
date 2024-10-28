@@ -19,10 +19,29 @@ Peki nasıl £2'a ulaşabiliriz ?
 - C++ üzerinden yazdığımız kod ile tüm olasılıkları deneyerek kaç adet yolla £2'a ulaşacağımızı hesaplayacağız.
 
 
-Gerekli kütüphaneleri dahil ediyoruz. iostream, giriş-çıkış işlemleri için kullanılır.
+
+Gerekli kütüphaneleri dahil ediyoruz. iostream, standart giriş-çıkış işlemleri için kullanılır. using namespace std; ifadesi, std ad alanındaki öğeleri kullanmamızı sağlar.
 
     #include <iostream>
+    using namespace std;
+
     
+Programın giriş noktası olan main fonksiyonu başlıyor.
+ 
+    int main() {
+
+- target, hedeflediğimiz toplam miktarı (200 peni) belirtiyor.
+- paradegerleri, mevcut bozuk para sayısını tanımlıyor.
+- paralar dizisi, kullanılabilir bozuk para değerlerini içeriyor. 
+
+      const int target = 200;  // Hedef toplam 200 peni
+      const int paradegerleri = 8;  // Toplamda 8 farklı bozuk para var
+      int paralar[paradegerleri] = {1, 2, 5, 10, 20, 50, 100, 200};  // Bozuk para değerleri
+
+ std ad alanını kullanmamızı sağlar. Böylece std::cout ve std::cin yazmak yerine sadece cout ve cin yazabiliriz.
+ 
+    using namespace std;
+
  std ad alanını kullanmamızı sağlar. Böylece std::cout ve std::cin yazmak yerine sadece cout ve cin yazabiliriz.
  
     using namespace std;
