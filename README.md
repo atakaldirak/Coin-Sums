@@ -38,69 +38,32 @@ Programın giriş noktası olan main fonksiyonu başlıyor.
       const int paradegerleri = 8;  // Toplamda 8 farklı bozuk para var
       int paralar[paradegerleri] = {1, 2, 5, 10, 20, 50, 100, 200};  // Bozuk para değerleri
 
- std ad alanını kullanmamızı sağlar. Böylece std::cout ve std::cin yazmak yerine sadece cout ve cin yazabiliriz.
- 
-    using namespace std;
 
- std ad alanını kullanmamızı sağlar. Böylece std::cout ve std::cin yazmak yerine sadece cout ve cin yazabiliriz.
- 
-    using namespace std;
+- ways dizisi, 0'dan 200'e kadar olan her değerin elde edilme yollarını tutuyor. Başlangıçta tüm değerler 0 olarak ayarlanıyor.
+- ways[0], 0 peni yapmanın bir yolu olduğunu belirtmek için 1 olarak ayarlanıyor.
+
+      int ways[target + 1] = {0};  // 0'dan 200'e kadar tüm kombinasyonlar için dizi
+      ways[0] = 1;  // 0 peni yapmanın 1 yolu var (hiç para kullanmadan)
+
+Dıştaki döngü, her bozuk para değerini sırayla işlemek için kullanılıyor. i değişkeni, hangi bozuk paranın kullanılacağını gösteriyor.
+
+    for (int i = 0; i < paradegerleri; i++) {
+
+- İçteki döngü, mevcut bozuk para kullanılarak hedef değere (200 peni) ulaşmaya çalışıyor.
+- j değişkeni, mevcut toplam değeri temsil ediyor.
+- ways[j], j değerine ulaşmanın yollarını güncelleyerek, önceki kombinasyonları değerlendiriyor.
+
+      for (int j = paralar[i]; j <= target; j++) {
+          ways[j] += ways[j - paralar[i]];
+      }
+Hesaplanan yolların sayısını ekrana yazdırıyoruz. Bu, 200 peni (2 pound) yapmanın toplam yollarını gösterir.
+
+    cout << "2 Pound yapmanin toplam yollari: " << ways[target] << endl;
+
+Programı sonlandırıyoruz ve 0 değeri döndürerek başarılı bir şekilde tamamlandığını belirtiyoruz.
+
+    return 0;
+    }
+  
 
 
-
-
-## UX
-
-**Getting Started**
-
-Enter the value in pence (between 1 and 1000) as a whole number (e.g. 200 pence for £2).  Unless you have made an invalid input, you will see the value in pence as well as the number of ways to make n pence using any number of coins.  For example, if you entered 50, you would expect to get 451 ways to make 50 pence using any number of coins.  Click on the Submit Button to clear the information or to start again.
-
-**User Stories**
-
-As a user, I expect to get an error message, if I do any of:
-
-- Not enter anything in the input field
-- Entering text other than a number
-- Entering a value less than 1 or greater than 1000
-- Entering a number that is not an integer
-
-As a user, I expect the function `coinSums(50)` to return a number.
-
-As a user, I expect the function `coinSums(50)` to return 451.
-
-As a user, I expect the function `coinSums(100)` to return 4563.
-
-As a user, I expect the function `coinSums(150)` to return 21873.
-
-As a user, I expect the function `coinSums(200)` to return 73682.
-
-**Information Architecture**
-
-The function `coinSums(n)` returns a number, where `n` is a number between 1 and 1000.
-
-## Features
-
-Allows the user to enter the value in pence as well as seeing the number of ways that n pence can be made using any number of coins.  Performs checks on valid user input.  If the input is not valid, an error message is displayed.  Despite the title 'Coin Sums', it can be used for other purposes such as finding the number of ways to make 10 runs in cricket using the scores of 1, 2, 3, 4, 5 and 6 and any number of scoring shots.
-
-## Technologies
-
-Uses HTML5, CSS3, JavaScript, Bootstrap 5.2.0-Beta1 and Google Fonts.  Dynamic Programming Approach.
-
-## Testing
-
-Ensure all user stories have been met.
-
-## Deployment
-
-Deployed on [GitHub Pages](https://derektypist.github.io/project-euler-031) at the main branch.
-
-## Credits
-
-### Content
-
-Written by me.
-
-### Acknowledgements
-
-- [Project Euler](https://projecteuler.net)
-- [FreeCodeCamp](https://www.freecodecamp.org)
