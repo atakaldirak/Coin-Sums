@@ -21,16 +21,16 @@ Peki nasıl £2'a ulaşabiliriz ?
 
 Oluşturduğum kodu inceleyelim.
 
-Gerekli kütüphaneleri dahil ediyoruz. iostream, standart giriş-çıkış işlemleri için kullanılır. using namespace std; ifadesi, std ad alanındaki öğeleri kullanmamızı sağlar.
+1 - Gerekli kütüphaneleri dahil ediyoruz. iostream, standart giriş-çıkış işlemleri için kullanılır. using namespace std; ifadesi, std ad alanındaki öğeleri kullanmamızı sağlar.
 
     #include <iostream>
     using namespace std;
 
     
-Programın giriş noktası olan main fonksiyonu başlıyor.
+2 - Programın giriş noktası olan main fonksiyonu başlıyor.
  
     int main() {
-
+3 - 
 - target, hedeflediğimiz toplam miktarı (200 peni) belirtiyor.
 - paradegerleri, mevcut bozuk para sayısını tanımlıyor.
 - paralar dizisi, kullanılabilir bozuk para değerlerini içeriyor. 
@@ -39,17 +39,17 @@ Programın giriş noktası olan main fonksiyonu başlıyor.
       const int paradegerleri = 8;  // Toplamda 8 farklı bozuk para var
       int paralar[paradegerleri] = {1, 2, 5, 10, 20, 50, 100, 200};  // Bozuk para değerleri
 
-
+4 - 
 - ways dizisi, 0'dan 200'e kadar olan her değerin elde edilme yollarını tutuyor. Başlangıçta tüm değerler 0 olarak ayarlanıyor.
 - ways[0], 0 peni yapmanın bir yolu olduğunu belirtmek için 1 olarak ayarlanıyor.
 
       int ways[target + 1] = {0};  // 0'dan 200'e kadar tüm kombinasyonlar için dizi
       ways[0] = 1;  // 0 peni yapmanın 1 yolu var (hiç para kullanmadan)
 
-Dıştaki döngü, her bozuk para değerini sırayla işlemek için kullanılıyor. i değişkeni, hangi bozuk paranın kullanılacağını gösteriyor.
+5 - Dıştaki döngü, her bozuk para değerini sırayla işlemek için kullanılıyor. i değişkeni, hangi bozuk paranın kullanılacağını gösteriyor.
 
     for (int i = 0; i < paradegerleri; i++) {
-
+6 - 
 - İçteki döngü, mevcut bozuk para kullanılarak hedef değere (200 peni) ulaşmaya çalışıyor.
 - j değişkeni, mevcut toplam değeri temsil ediyor.
 - ways[j], j değerine ulaşmanın yollarını güncelleyerek, önceki kombinasyonları değerlendiriyor.
@@ -57,11 +57,11 @@ Dıştaki döngü, her bozuk para değerini sırayla işlemek için kullanılıy
       for (int j = paralar[i]; j <= target; j++) {
           ways[j] += ways[j - paralar[i]];
       }
-Hesaplanan yolların sayısını ekrana yazdırıyoruz. Bu, 200 peni (2 pound) yapmanın toplam yollarını gösterir.
+7 - Hesaplanan yolların sayısını ekrana yazdırıyoruz. Bu, 200 peni (2 pound) yapmanın toplam yollarını gösterir.
 
     cout << "2 Pound yapmanin toplam yollari: " << ways[target] << endl;
 
-Programı sonlandırıyoruz ve 0 değeri döndürerek başarılı bir şekilde tamamlandığını belirtiyoruz.
+8 - Programı sonlandırıyoruz ve 0 değeri döndürerek başarılı bir şekilde tamamlandığını belirtiyoruz.
 
     return 0;
     }
