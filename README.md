@@ -1,12 +1,12 @@
 # Project Euler 031 - Coin Sums
 
-Birleşik Krallık'ta para, pound (£) ve pence (p) olarak ikiye ayrılır. Sekiz madeni para bulunmaktadır:
+Birleşik Krallık'ta para, pound (£) ve pence (p) olarak ikiye ayrılır. Elimizde sekiz adet madeni para bulunmaktadır:
 
     1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), ve £2 (200p).
 
-Örnek olarak aşağıdaki gibi £2 yapabiliriz:
+Örnek olarak elimizdeki paralarla aşağıdaki gibi £2 yapabiliriz:
 
-    1 adet £1 + 1 adet 50p + 2 adet 20p + 1 adet 5p + 1 adet 2p + 3 adet 1p
+    1 adet £1 + 1 adet 50p + 2 adet 20p + 1 adet 5p + 1 adet 2p + 3 adet 1p = £2
 
 Bu problemde bizden istenen kaç adet yolla £2'a ulaşabiliriz.
 
@@ -19,12 +19,16 @@ Peki nasıl £2'a ulaşabiliriz ?
 - C++ üzerinden yazdığımız kod ile tüm olasılıkları deneyerek kaç adet yolla £2'a ulaşacağımızı hesaplayacağız.
 
 
-To make 5p there are 4 ways:
+Gerekli kütüphaneleri dahil ediyoruz. iostream, giriş-çıkış işlemleri için kullanılır.
 
-    1,1,1,1,1
-    1,1,1,2
-    1,2,2
-    5
+    #include <iostream>
+    
+ std ad alanını kullanmamızı sağlar. Böylece std::cout ve std::cin yazmak yerine sadece cout ve cin yazabiliriz.
+ 
+    using namespace std;
+
+
+
 
 ## UX
 
