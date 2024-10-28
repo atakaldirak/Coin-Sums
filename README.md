@@ -19,6 +19,7 @@ Peki nasıl £2'a ulaşabiliriz ?
 - C++ üzerinden yazdığımız kod ile tüm olasılıkları deneyerek kaç adet yolla £2'a ulaşacağımızı hesaplayacağız.
 
 
+Oluşturduğum kodu inceleyelim.
 
 Gerekli kütüphaneleri dahil ediyoruz. iostream, standart giriş-çıkış işlemleri için kullanılır. using namespace std; ifadesi, std ad alanındaki öğeleri kullanmamızı sağlar.
 
