@@ -8,18 +8,16 @@ Birleşik Krallık'ta para, pound (£) ve pence (p) olarak ikiye ayrılır. Seki
 
     1 adet £1 + 1 adet 50p + 2 adet 20p + 1 adet 5p + 1 adet 2p + 3 adet 1p
 
-Bu problemde bizden istenen kaç adet kombinasyonla £2'a ulaşabiliriz.
+Bu problemde bizden istenen kaç adet yolla £2'a ulaşabiliriz.
 
 Projenin detayı sağdaki linkte mevcuttur. [Project Euler 031](https://projecteuler.net/problem=31)
 
-**İpucu**
+Peki nasıl £2'a ulaşabiliriz ?
 
-- There are 100 pence in a pound (£1 = 100p)
-- There are coins (in pence) that are available: 1, 2, 5, 10, 20, 50, 100, 200
-- How many different ways you can combine these values to make n pence
-- Use the Dynamic Programming Approach
+- 1 pound 100 pence'den oluşur. (£1 = 100p)
+- Elimizde 8 adet pence cinsinden bozuk para var var: 1, 2, 5, 10, 20, 50, 100, 200
+- C++ üzerinden yazdığımız kod ile tüm olasılıkları deneyerek kaç adet yolla £2'a ulaşacağımızı hesaplayacağız.
 
-**Example**
 
 To make 5p there are 4 ways:
 
