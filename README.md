@@ -65,6 +65,9 @@ Oluşturduğum kodu inceleyelim.
 
     return 0;
     }
-  
+Kodu çalıştırdığıımızda 73682 adet kombinasyon ile £2 elde edebileceğimizi görüyoruz.
+
+  ![2yi02y4](https://github.com/user-attachments/assets/2c17dc6b-9d84-4abf-8be6-6c506cdb51f5)
+
 
 
